@@ -7,7 +7,8 @@
 
 
 void help(char* arg){
-  printf("Uso: stego -c archivoA archivoB archivoC: Codifica archivoA dentro de archivoB y guarda el resultado en archivoC\n\tstego -o archivoA archivoB: extrae archivoA de archivoB\n");
+  printf("Uso: %s -c archivoA archivoB archivoC: Codifica archivoA dentro de archivoB y guarda el resultado en archivoC\n",arg[0]);
+  printf("\t%s -o archivoA: extrae un archivo codificado de archivoA y lo muestra por consola\n",arg[0]);
 }
 int getBit(int n, char number){
   return (number >> n) & 1;
