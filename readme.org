@@ -1,0 +1,37 @@
+* Steganography
+
+  Steganography is the technique of hiding information inside a file.
+
+* LSB
+
+  LSB is a steganography method which encodes a file into the least
+  significant bits of each byte of another file.
+
+* Compilation
+
+  Simply use
+
+  #+BEGIN_SRC bash
+  make
+  #+END_SRC
+
+* Usage
+
+  LSB can work in two directions:
+
+** Hide something into a file
+
+  #+BEGIN_SRC bash
+./lsb -c input_file containter_file output_file
+  #+END_SRC
+
+   This mode will hide input_file into container_file and store the
+   result in output_file
+
+** Read the hidden message in a file
+     #+BEGIN_SRC bash
+./lsb -o  containter_file
+     #+END_SRC
+
+   This mode will print to standard output the file hidden in
+   container_file
