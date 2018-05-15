@@ -7,8 +7,8 @@
 
 
 void help(char* arg){
-  printf("Uso: %s -c archivoA archivoB archivoC:\n\tCodifica archivoA dentro de archivoB y guarda el resultado en archivoC\n",arg);
-  printf("\t%s -o archivoA:\n\t extrae un archivo codificado de archivoA y lo muestra por consola\n",arg);
+  printf("Usage: %s -c input_file container_file output_file:\n\tHides input_file into container_file and stores the result in output file\n",arg);
+  printf("\t%s -o container_file:\n\tPrints to standard output the message hidden in container_file\n",arg);
 }
 int getBit(int n, char number){
   return (number >> n) & 1;
